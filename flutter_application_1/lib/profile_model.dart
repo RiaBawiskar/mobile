@@ -1,6 +1,6 @@
 class Profile{
   String username;
-  String password; //url
+  String password;
 
   Profile(this.username, this.password);
 }
