@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Future<String> _loginUser(LoginData data) {
     return Future.delayed(loginTime).then((_) {
       if (!users.containsKey(data.name)) {
-        return 'Username does not exists';
+        return 'Username does not exist';
       }
       if (users[data.name] != data.password) {
         return 'Password does not match';
