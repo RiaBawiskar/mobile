@@ -31,7 +31,10 @@ class _BasePageState extends State<BasePage> {
       backgroundColor: Colors.green[900],
       title: Text("GreenThreads"),
       actions: [
-        IconButton(icon: Image.asset('')),
+        IconButton(
+          icon: Image.asset('assets/images/finalgtlogo.png'),
+          onPressed: () {},
+        ),
         searchBar.getSearchAction(context),
       ],
     );
@@ -44,6 +47,14 @@ class _BasePageState extends State<BasePage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
+            DrawerHeader(
+              child: Center(
+                  child: Text(
+                'FILTERS',
+                style: TextStyle(fontSize: 40, color: Colors.white),
+              )),
+              decoration: BoxDecoration(color: Colors.green[900]),
+            ),
             ListTile(
               title: Text('Pants'),
               onTap: () {
