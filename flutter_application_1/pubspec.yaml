@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   flutter_login: ^1.0.14
+  flutter_search_bar: ^2.1.0
   flutter:
     sdk: flutter
 

@@ -1,31 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_search_bar/flutter_search_bar.dart';
 
 import 'grid_card_item.dart';
 import 'item.dart';
 
-class BasePage extends StatelessWidget {
-  final appbar = AppBar(
-    actions: [],
-  );
+class BasePage extends StatefulWidget {
+  @override
+  _BasePageState createState() => _BasePageState();
+}
+
+class _BasePageState extends State<BasePage> {
+  SearchBar searchBar;
   List<Item> itemList = [
     Item("IMG", "DESCRIPTION", "PRICE"),
     Item("IMG", "DESCRIPTION", "PRICE"),
     Item("IMG", "DESCRIPTION", "PRICE")
   ];
+
+  _BasePageState() {
+    searchBar = new SearchBar(
+      inBar: false,
+      setState: setState,
+      onSubmitted: null,
+      buildDefaultAppBar: buildAppBar,
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return new AppBar(
+      backgroundColor: Colors.green[900],
+      title: Text("GreenThreads"),
+      actions: [searchBar.getSearchAction(context)],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green[900],
-        title: Text("GreenThreads"),
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu,
-            color: Colors.white,
-          ),
-          onPressed: null,
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            ListTile(
+              title: Text('Pants'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Shirts'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
         ),
       ),
+      appBar: searchBar.build(context),
       bottomNavigationBar: BottomAppBar(
         color: Colors.green[800],
         child: Row(
@@ -40,7 +71,7 @@ class BasePage extends StatelessWidget {
                 onPressed: null),
             IconButton(
                 icon: Icon(
-                  Icons.search,
+                  Icons.notifications,
                   color: Colors.white,
                 ),
                 onPressed: null),
