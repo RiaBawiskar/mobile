@@ -30,7 +30,10 @@ class _BasePageState extends State<BasePage> {
     return new AppBar(
       backgroundColor: Colors.green[900],
       title: Text("GreenThreads"),
-      actions: [searchBar.getSearchAction(context)],
+      actions: [
+        IconButton(icon: Image.asset('')),
+        searchBar.getSearchAction(context),
+      ],
     );
   }
 
