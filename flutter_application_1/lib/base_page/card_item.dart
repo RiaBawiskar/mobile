@@ -17,7 +17,7 @@ class CardItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text(item.img),
+              item.img,
               SizedBox(height: 6),
               Text(item.description + item.price),
               SizedBox(height: 6),

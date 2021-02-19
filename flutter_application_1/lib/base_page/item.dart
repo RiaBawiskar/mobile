@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
+
 class Item {
-  String img;
+  Image img;
   String description;
   String price;
   Item(this.img, this.description, this.price);

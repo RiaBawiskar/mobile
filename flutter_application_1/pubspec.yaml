@@ -42,6 +42,10 @@ dev_dependencies:
 flutter:
   assets:
   - assets/images/finalgtlogo.png
+  - assets/images/ankitha.jpg
+  - assets/images/anika.jpg
+  - assets/images/ashley.jpg
+  - assets/images/teagan.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
