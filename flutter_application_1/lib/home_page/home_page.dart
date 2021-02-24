@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_application_1/base_page/base_page.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:flutter_login/theme.dart';
 
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
     });
   }
 
-    Future<String> _recoverPassword(String name) {
+  Future<String> _recoverPassword(String name) {
     return Future.delayed(loginTime).then((_) {
       if (!users.containsKey(name)) {
         return 'Username not exists';
@@ -74,6 +75,11 @@ class HomePage extends StatelessWidget {
         print('Recover password info');
         print('Name: $name');
         return _recoverPassword(name);
+      },
+      onSubmitAnimationCompleted: () {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => BasePage()),
+        );
       },
     );
   }
