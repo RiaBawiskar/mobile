@@ -17,10 +17,27 @@ class CardItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              item.img,
+              Container(
+                width: 200,
+                height: 200,
+                alignment: Alignment.center,
+                decoration: new BoxDecoration(
+                  image: DecorationImage(image: item.img, fit: BoxFit.fill),
+                ),
+              ),
               SizedBox(height: 6),
-              Text(item.description + item.price),
-              SizedBox(height: 6),
+              Text(
+                item.description,
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 45),
+              Text(
+                item.price,
+                style: TextStyle(fontSize: 15, color: Colors.black),
+              ),
             ],
           ),
         ),
