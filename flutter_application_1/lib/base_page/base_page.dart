@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
 
+import 'aboutUs_page/aboutUs_page.dart';
 import 'grid_card_item.dart';
 import 'item.dart';
 
@@ -12,9 +13,14 @@ class BasePage extends StatefulWidget {
 class _BasePageState extends State<BasePage> {
   SearchBar searchBar;
   List<Item> itemList = [
-    Item("IMG", "DESCRIPTION", "PRICE"),
-    Item("IMG", "DESCRIPTION", "PRICE"),
-    Item("IMG", "DESCRIPTION", "PRICE")
+    Item(AssetImage('assets/images/a.png'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/b.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/c.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/d.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/e.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/f.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/g.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/h.jpeg'), "DESCRIPTION", "PRICE")
   ];
 
   _BasePageState() {
@@ -33,7 +39,10 @@ class _BasePageState extends State<BasePage> {
       actions: [
         IconButton(
           icon: Image.asset('assets/images/finalgtlogo.png'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => AboutUs()));
+          },
         ),
         searchBar.getSearchAction(context),
       ],
