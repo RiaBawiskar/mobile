@@ -4,7 +4,7 @@ import 'card_item.dart';
 import 'item.dart';
 
 class ItemGridWidget extends StatelessWidget {
-  final List<Item> itemList;
+  final List<Aesthetic> itemList;
   ItemGridWidget(this.itemList);
 
   @override

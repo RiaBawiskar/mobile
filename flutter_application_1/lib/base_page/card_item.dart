@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/item.dart';
 
 class CardItem extends StatelessWidget {
-  final Item item;
+  final Aesthetic item;
   CardItem(this.item);
 
   @override
@@ -32,11 +32,6 @@ class CardItem extends StatelessWidget {
                     fontSize: 15,
                     color: Colors.black,
                     fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 45),
-              Text(
-                item.price,
-                style: TextStyle(fontSize: 15, color: Colors.black),
               ),
             ],
           ),
