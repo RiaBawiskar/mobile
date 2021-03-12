@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/item.dart';
 
+import 'aesthetics/aestheticPage.dart';
+
 class CardItem extends StatelessWidget {
+  final List<String> style = ["90s","egirl","soft"];
   final Aesthetic item;
   CardItem(this.item);
 
@@ -12,7 +15,13 @@ class CardItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
-          onTap: () => null,
+          onTap: () {
+            for(int i=0; i < style.length;i++){
+              if(item.description == style[i]){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AestheticPage(style[i], item)));
+              }
+            }
+          },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
