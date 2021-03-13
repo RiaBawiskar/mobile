@@ -11,6 +11,7 @@ class CardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey[300],
       elevation: 4,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -29,17 +30,17 @@ class CardItem extends StatelessWidget {
               Container(
                 width: 200,
                 height: 200,
-                alignment: Alignment.center,
+                alignment: Alignment.topCenter,
                 decoration: new BoxDecoration(
                   image: DecorationImage(image: item.img, fit: BoxFit.fill),
                 ),
               ),
-              SizedBox(height: 6),
+              SizedBox(height: 20),
               Text(
                 item.description,
                 style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.black,
+                    fontSize: 25,
+                    color: Colors.grey[700],
                     fontWeight: FontWeight.bold),
               ),
             ],

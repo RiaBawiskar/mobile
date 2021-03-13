@@ -30,7 +30,7 @@ class _BasePageState extends State<BasePage> {
   AppBar buildAppBar(BuildContext context) {
     return new AppBar(
       backgroundColor: Colors.green[900],
-      title: Text("GreenThreads"),
+      title: Text("Aesthetics"),
       actions: [
         IconButton(
           icon: Image.asset('assets/images/finalgtlogo.png'),
@@ -47,6 +47,7 @@ class _BasePageState extends State<BasePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightGreen[200],
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Page90s extends StatelessWidget {
+class SoftPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -8,7 +8,7 @@ class Page90s extends StatelessWidget {
         Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "If you wore a bomber jacket, fanny pack, flannels in the 90’s, you were automatically the coolest kid in town. 90’s fashion was heavily influenced by music genres like hip-hop, indie rock, and grunge.",
+              "A simplistic and casual look, the soft aesthetic is perfect for those curious to try new fashion styles. Lighter shades of color and oversized jeans are a sure staple that makes this aesthetic so irresistible!",
               style: TextStyle(fontSize: 25),
               textAlign: TextAlign.center,
             )),
@@ -16,7 +16,7 @@ class Page90s extends StatelessWidget {
             onPressed: () {
               null;
             },
-            child: Text("Click to view 90s Products"))
+            child: Text("Click to view soft Products"))
       ],
     );
   }
