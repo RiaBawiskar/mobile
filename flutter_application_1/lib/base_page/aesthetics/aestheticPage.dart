@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/item.dart';
 
-import '../base_page.dart';
 import '90sPage.dart';
+import 'aestheticShoppingPage.dart';
 import 'egirlPage.dart';
 import 'softPage.dart';
 
@@ -16,16 +16,16 @@ class AestheticPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightGreen[200],
       appBar: AppBar(
-        title: Text(item.description),
-        backgroundColor: Colors.green[900],
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => BasePage()));
-          },
-        ),
-      ),
+          title: Text(item.description),
+          backgroundColor: Colors.green[900],
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => AestheticShoppingPage(this.style, this.item)));
+            },
+          ),
+          ),
       body: Container(
         child: Column(
           children: [

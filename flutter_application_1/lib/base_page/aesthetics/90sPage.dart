@@ -12,11 +12,6 @@ class Page90s extends StatelessWidget {
               style: TextStyle(fontSize: 25),
               textAlign: TextAlign.center,
             )),
-        RaisedButton(
-            onPressed: () {
-              null;
-            },
-            child: Text("Click to view 90s Products"))
       ],
     );
   }

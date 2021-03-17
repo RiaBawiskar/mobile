@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/item.dart';
 
-import 'aesthetics/aestheticPage.dart';
+import 'aesthetics/aestheticShoppingPage.dart';
 
 class CardItem extends StatelessWidget {
   final List<String> style = ["90s","egirl","soft"];
@@ -19,7 +19,7 @@ class CardItem extends StatelessWidget {
           onTap: () {
             for(int i=0; i < style.length;i++){
               if(item.description == style[i]){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AestheticPage(style[i], item)));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AestheticShoppingPage(style[i], item)));
               }
             }
           },

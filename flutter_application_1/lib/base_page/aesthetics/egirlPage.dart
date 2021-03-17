@@ -13,11 +13,6 @@ class EgirlPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        RaisedButton(
-            onPressed: () {
-              null;
-            },
-            child: Text("Click to view egirl Products"))
       ],
     );
   }
