@@ -3,7 +3,7 @@ import 'package:flutter_application_1/base_page/Products/product.dart';
 
 import 'grid_card_item.dart';
 
-class ShoppingPage90s extends StatelessWidget {
+class EgirlShoppingPage extends StatelessWidget {
   final List<Product> products = [
     Product(AssetImage('assets/images/b.jpeg'), "Product B description", 10, "Product B", 5),
     Product(AssetImage('assets/images/c.jpeg'), "Product C description", 15, "Product C", 12),

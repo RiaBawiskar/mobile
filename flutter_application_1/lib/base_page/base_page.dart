@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/base_page/mainBottomAppBar.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
 
 import 'aboutUs_page/aboutUs_page.dart';
@@ -76,39 +77,7 @@ class _BasePageState extends State<BasePage> {
         ),
       ),
       appBar: searchBar.build(context),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.green[800],
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-                icon: Icon(
-                  Icons.home,
-                  color: Colors.white,
-                ),
-                onPressed: null),
-            IconButton(
-                icon: Icon(
-                  Icons.notifications,
-                  color: Colors.white,
-                ),
-                onPressed: null),
-            IconButton(
-                icon: Icon(
-                  Icons.attach_money_rounded,
-                  color: Colors.white,
-                ),
-                onPressed: null),
-            IconButton(
-                icon: Icon(
-                  Icons.person,
-                  color: Colors.white,
-                ),
-                onPressed: null),
-          ],
-        ),
-      ),
+      bottomNavigationBar:MainBottomBar(),
       body: ItemGridWidget(itemList),
     );
   }
