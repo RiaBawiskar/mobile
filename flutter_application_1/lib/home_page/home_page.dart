@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_application_1/base_page/base_page.dart';
+import 'package:flutter_application_1/base_page/welcome_page/welcome.dart';
 import 'package:flutter_login/flutter_login.dart';
-import 'package:flutter_login/theme.dart';
 
 import 'users.dart';
 
@@ -78,7 +77,7 @@ class HomePage extends StatelessWidget {
       },
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => BasePage()),
+          MaterialPageRoute(builder: (context) => WelcomePage()),
         );
       },
     );
