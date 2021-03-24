@@ -11,6 +11,7 @@ class GreenThreads extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: WelcomePage(),
+      theme: ThemeData(fontFamily: 'Poppins')
     );
   }
 }

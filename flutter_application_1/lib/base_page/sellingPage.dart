@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/mainBottomAppBar.dart';
 
 class SellingPage extends StatelessWidget {
-  final TextStyle steps = TextStyle(fontSize: 20, fontWeight: FontWeight.w400);
+  final TextStyle steps = TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -60,7 +60,8 @@ class WelcomePage extends StatelessWidget {
                                     child: Text(
                                       "Like Clothes?… We do too!",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
                                     ),
                                   ),
                                   height: 50,
@@ -78,7 +79,7 @@ class WelcomePage extends StatelessWidget {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       "Green Threads Co. is your one stop shop for unique trendy items. From Crew necks to jeans we’ll have some items in store that you won’t want to live without.",
-                                      style: TextStyle(),
+                                      style: TextStyle(fontSize: 11.5),
                                     ),
                                   ),
                                 ),
@@ -115,7 +116,9 @@ class WelcomePage extends StatelessWidget {
                                     child: Text(
                                       "Our page",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13
+                                          ),
                                     ),
                                   ),
                                   height: 35,
@@ -133,7 +136,7 @@ class WelcomePage extends StatelessWidget {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       "If you want to get some more ideas about your style or the vibe of clothes you want to buy, check out our home page where you can view a variety of aesthetics that we carry. Click X to begin!",
-                                      style: TextStyle(),
+                                      style: TextStyle(fontSize: 11.5),
                                     ),
                                   ),
                                 ),
