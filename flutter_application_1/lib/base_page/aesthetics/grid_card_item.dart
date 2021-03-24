@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/base_page/Products/product.dart';
 
-import 'card_item.dart';
-import 'item.dart';
+import 'cardProduct.dart';
 
-class ItemGridWidget extends StatelessWidget {
-  final List<Aesthetic> itemList;
-  ItemGridWidget(this.itemList);
+class ProductGridWidget extends StatelessWidget {
+  final List<Product> itemList;
+  ProductGridWidget(this.itemList);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ItemGridWidget extends StatelessWidget {
           crossAxisSpacing: 6,
         ),
         itemBuilder: (BuildContext context, int index) {
-          return CardItem(itemList[index]);
+          return CardProduct(itemList[index]);
         },
       ),
     );
