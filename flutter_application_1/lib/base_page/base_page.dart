@@ -14,15 +14,10 @@ class BasePage extends StatefulWidget {
 
 class _BasePageState extends State<BasePage> {
   SearchBar searchBar;
-  List<Item> itemList = [
-    Item(AssetImage('assets/images/a.png'), "DESCRIPTION", "PRICE"),
-    Item(AssetImage('assets/images/b.jpeg'), "DESCRIPTION", "PRICE"),
-    Item(AssetImage('assets/images/c.jpeg'), "DESCRIPTION", "PRICE"),
-    Item(AssetImage('assets/images/d.jpeg'), "DESCRIPTION", "PRICE"),
-    Item(AssetImage('assets/images/e.jpeg'), "DESCRIPTION", "PRICE"),
-    Item(AssetImage('assets/images/f.jpeg'), "DESCRIPTION", "PRICE"),
-    Item(AssetImage('assets/images/g.jpeg'), "DESCRIPTION", "PRICE"),
-    Item(AssetImage('assets/images/h.jpeg'), "DESCRIPTION", "PRICE")
+  List<Aesthetic>itemList = [
+    Aesthetic(AssetImage('assets/images/90s.jpg'), "90s"),
+    Aesthetic(AssetImage('assets/images/egirl.jpeg'), "egirl"),
+    Aesthetic(AssetImage('assets/images/soft.jpg'), "soft"),
   ];
 
   _BasePageState() {
@@ -37,7 +32,7 @@ class _BasePageState extends State<BasePage> {
   AppBar buildAppBar(BuildContext context) {
     return new AppBar(
       backgroundColor: Colors.green[900],
-      title: Text("GreenThreads"),
+      title: Text("Aesthetics"),
       actions: [
         IconButton(
           icon: Image.asset('assets/images/finalgtlogo.png'),
@@ -54,6 +49,7 @@ class _BasePageState extends State<BasePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightGreen[200],
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -82,7 +78,7 @@ class _BasePageState extends State<BasePage> {
         ),
       ),
       appBar: searchBar.build(context),
-      bottomNavigationBar: MainBottomBar(),
+      bottomNavigationBar:MainBottomBar(),
       body: ItemGridWidget(itemList),
     );
   }

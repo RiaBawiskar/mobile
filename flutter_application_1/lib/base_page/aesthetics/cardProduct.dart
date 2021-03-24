@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/base_page/item.dart';
+import 'package:flutter_application_1/base_page/Products/product.dart';
 
-import 'aesthetics/aestheticShoppingPage.dart';
-
-class CardItem extends StatelessWidget {
-  final List<String> style = ["90s","egirl","soft"];
-  final Aesthetic item;
-  CardItem(this.item);
+class CardProduct extends StatelessWidget {
+  final Product item;
+  CardProduct(this.item);
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +14,7 @@ class CardItem extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
           onTap: () {
-            for(int i=0; i < style.length;i++){
-              if(item.description == style[i]){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AestheticShoppingPage(style[i], item)));
-              }
-            }
+            null;
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -35,14 +28,21 @@ class CardItem extends StatelessWidget {
                   image: DecorationImage(image: item.img, fit: BoxFit.fill),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Text(
-                item.description,
+                item.title,
                 style: TextStyle(
                     fontSize: 25,
                     color: Colors.grey[700],
                     fontWeight: FontWeight.bold),
               ),
+              Text(
+                "\$${item.price}",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.grey[700],
+                    fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ),
