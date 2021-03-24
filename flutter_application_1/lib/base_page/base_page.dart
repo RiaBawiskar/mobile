@@ -13,9 +13,14 @@ class BasePage extends StatefulWidget {
 class _BasePageState extends State<BasePage> {
   SearchBar searchBar;
   List<Item> itemList = [
-    Item(Image.asset('assets/images/anika.jpg'), "DESCRIPTION", "PRICE"),
-    Item(Image.asset('assets/images/ankitha.jpg'), "DESCRIPTION", "PRICE"),
-    Item(Image.asset('assets/images/teagan.jpg'), "DESCRIPTION", "PRICE")
+    Item(AssetImage('assets/images/a.png'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/b.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/c.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/d.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/e.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/f.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/g.jpeg'), "DESCRIPTION", "PRICE"),
+    Item(AssetImage('assets/images/h.jpeg'), "DESCRIPTION", "PRICE")
   ];
 
   _BasePageState() {
