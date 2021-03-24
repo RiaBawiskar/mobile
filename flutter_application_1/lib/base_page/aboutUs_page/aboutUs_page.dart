@@ -37,38 +37,36 @@ class AboutUs extends StatelessWidget {
                   Image.asset('assets/images/anika.jpg'),
                   Padding(
                     padding: const EdgeInsets.all(15),
-                    child: Text(
-                      "Anika Gurbani: Chief Executive Officer",
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center
-                    ),
+                    child: Text("Anika Gurbani: Chief Executive Officer",
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center),
                   ),
                   Image.asset('assets/images/ashley.jpg'),
                   Padding(
                     padding: const EdgeInsets.all(15),
-                    child: Text(
-                      "Ashley Chen: Chief Operating Officer",
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center
-                    ),
+                    child: Text("Ashley Chen: Chief Operating Officer",
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center),
                   ),
                   Image.asset('assets/images/ankitha.jpg'),
                   Padding(
                     padding: const EdgeInsets.all(15),
-                    child: Text(
-                      "Ankitha Lingamaneni: Chief Financial Officer",
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center
-                    ),
+                    child: Text("Ankitha Lingamaneni: Chief Financial Officer",
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center),
                   ),
                   Image.asset('assets/images/teagan.jpg'),
                   Padding(
                     padding: const EdgeInsets.all(15),
-                    child: Text(
-                      "Teagan Pahl: Chief Of Administration",
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center
-                    ),
+                    child: Text("Teagan Pahl: Chief Of Administration",
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Text("@greenthreads.co",
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center),
                   ),
                 ],
               ),

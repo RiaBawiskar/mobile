@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/mainBottomAppBar.dart';
+import 'package:flutter_application_1/base_page/sellingPage.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
 
 import 'aboutUs_page/aboutUs_page.dart';
