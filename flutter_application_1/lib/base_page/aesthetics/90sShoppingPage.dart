@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/Products/product.dart';
 
-import 'grid_card_item.dart';
+import 'grid_card_product.dart';
 
 class ShoppingPage90s extends StatelessWidget {
   final List<Product> products = [
