@@ -19,17 +19,15 @@ class _BasePageState extends State<BasePage> {
 
   AppBar buildAppBar(BuildContext context) {
     return new AppBar(
-      backgroundColor: Colors.green[900],
-      title: Text("Aesthetics"),
-      actions: [
-        IconButton(
+      leading: IconButton(
           icon: Image.asset('assets/images/finalgtlogo.png'),
           onPressed: () {
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => AboutUs()));
           },
         ),
-      ],
+      backgroundColor: Colors.green[900],
+      title: Text("Aesthetics"),
     );
   }
 
@@ -38,33 +36,6 @@ class _BasePageState extends State<BasePage> {
     return Scaffold(
       appBar: buildAppBar(context),
       backgroundColor: Colors.lightGreen[200],
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              child: Center(
-                  child: Text(
-                'FILTERS',
-                style: TextStyle(fontSize: 40, color: Colors.white),
-              )),
-              decoration: BoxDecoration(color: Colors.green[900]),
-            ),
-            ListTile(
-              title: Text('Pants'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Shirts'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
       bottomNavigationBar:MainBottomBar(),
       body: ItemGridWidget(itemList),
     );
