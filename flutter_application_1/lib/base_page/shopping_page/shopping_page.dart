@@ -49,7 +49,7 @@ class _ShoppingPageState extends State<ShoppingPage> {
     return Scaffold(
       backgroundColor: Colors.lightGreen[200],
       appBar: searchBar.build(context),
-      drawer: Menu(),
+      drawer: Menu(this.products),
       body: ProductGridWidget(products),
       bottomNavigationBar: MainBottomBar(),
     );

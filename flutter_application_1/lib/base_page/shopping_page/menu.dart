@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/base_page/Products/product.dart';
+import 'package:flutter_application_1/base_page/shopping_page/sort_by_algorithm.dart';
 
 class Menu extends StatefulWidget {
+  List<Product> products;
   @override
-  _MenuState createState() => _MenuState();
+  _MenuState createState() => _MenuState(this.products);
+  Menu(this.products);
 }
 
 class _MenuState extends State<Menu> {
   String _chosenValue;
-
+  List<Product> products;
+  _MenuState(this.products);
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -53,7 +58,7 @@ class _MenuState extends State<Menu> {
             height: 360,
             child: DropdownButton<String>(
               itemHeight: 100,
-              items: <String>['One', 'Two', 'Free', 'Four', 'Five', 'Six',]
+              items: <String>['Price Low to High', 'Two', 'Free', 'Four', 'Five', 'Six',]
                   .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -73,6 +78,7 @@ class _MenuState extends State<Menu> {
               onChanged: (String value) {
                 setState(() {
                   _chosenValue = value;
+                  SortBy(_chosenValue,this.products);
                 });
               },
             ),
