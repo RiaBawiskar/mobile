@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/Products/product.dart';
+import 'package:flutter_application_1/base_page/aesthetics/grid_card_product.dart';
 import 'package:flutter_application_1/base_page/shopping_page/sort_by_algorithm.dart';
 
 class Menu extends StatefulWidget {
-  List<Product> products;
+  final List<Product> products;
   @override
   _MenuState createState() => _MenuState(this.products);
   Menu(this.products);
@@ -78,7 +79,8 @@ class _MenuState extends State<Menu> {
               onChanged: (String value) {
                 setState(() {
                   _chosenValue = value;
-                  SortBy(_chosenValue,this.products);
+                  SortBy newList = SortBy(_chosenValue,this.products);
+                  ProductGridWidget(newList.sort());
                 });
               },
             ),
