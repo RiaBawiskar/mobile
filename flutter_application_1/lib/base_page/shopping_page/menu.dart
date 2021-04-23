@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/Products/product.dart';
 import 'package:flutter_application_1/base_page/aesthetics/grid_card_product.dart';
+import 'package:flutter_application_1/base_page/shopping_page/shopping_page.dart';
 import 'package:flutter_application_1/base_page/shopping_page/sort_by_algorithm.dart';
 
 class Menu extends StatefulWidget {
@@ -59,15 +60,21 @@ class _MenuState extends State<Menu> {
             height: 360,
             child: DropdownButton<String>(
               itemHeight: 100,
-              items: <String>['Price Low to High', 'Two', 'Free', 'Four', 'Five', 'Six',]
-                  .map<DropdownMenuItem<String>>((String value) {
+              items: <String>[
+                'Price Low to High',
+                'Price High to Low',
+                'Free',
+                'Four',
+                'Five',
+                'Six',
+              ].map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(
-                      value,
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  );
+                    value,
+                    style: TextStyle(color: Colors.black),
+                  ),
+                );
               }).toList(),
               hint: Text(
                 "Sort By",
@@ -77,11 +84,17 @@ class _MenuState extends State<Menu> {
                     fontWeight: FontWeight.w500),
               ),
               onChanged: (String value) {
-                setState(() {
-                  _chosenValue = value;
-                  SortBy newList = SortBy(_chosenValue,this.products);
-                  ProductGridWidget(newList.sort());
-                });
+                _chosenValue = value;
+                SortBy newList = SortBy(_chosenValue, this.products);
+                Navigator.pop(context);
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        ShoppingPage(ProductGridWidget(newList.sort())),
+                  ),
+                );
               },
             ),
           ),

@@ -3,6 +3,7 @@ import 'package:flutter_application_1/base_page/Products/product.dart';
 class SortBy {
   String value;
   List<Product> productsLowtoHigh;
+  List<Product> productsHightoLow;
   List<Product> products;
   SortBy(this.value, this.products);
 
@@ -11,7 +12,12 @@ class SortBy {
       this.productsLowtoHigh = [];
       lowToHigh(createCopy());
       return this.productsLowtoHigh;
-    } else {
+    } else if(this.value == "Price High to Low") {
+      this.productsHightoLow = [];
+      highToLow(createCopy());
+      return this.productsHightoLow;
+    }
+    else{
       return null;
     }
   }
@@ -37,6 +43,21 @@ class SortBy {
       this.productsLowtoHigh.add(copyOfProducts[indexLow]);
       copyOfProducts.removeAt(indexLow);
       lowToHigh(copyOfProducts);
+    }
+  }
+    void highToLow(List<Product> copyOfProducts) {
+    if (copyOfProducts.length == 0) {
+      return;
+    } else {
+      int indexHigh = 0;
+      for (int i = 0; i < copyOfProducts.length; i++) {
+        if (copyOfProducts[i].price > copyOfProducts[indexHigh].price) {
+          indexHigh = i;
+        }
+      }
+      this.productsHightoLow.add(copyOfProducts[indexHigh]);
+      copyOfProducts.removeAt(indexHigh);
+      highToLow(copyOfProducts);
     }
   }
 }
