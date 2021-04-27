@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/Products/product.dart';
 import 'package:flutter_application_1/base_page/aesthetics/grid_card_product.dart';
 import 'package:flutter_application_1/base_page/shopping_page/shopping_page.dart';
-import 'package:flutter_application_1/base_page/shopping_page/sort_by_algorithm.dart';
+import 'package:flutter_application_1/base_page/shopping_page/filter_algorithm.dart';
+
+import 'sort_by_algorithm.dart';
 
 class Menu extends StatefulWidget {
   final List<Product> products;
@@ -32,7 +34,7 @@ class _MenuState extends State<Menu> {
             height: 360,
             child: DropdownButton<String>(
               itemHeight: 100,
-              items: <String>['One', 'Two', 'Free', 'Four']
+              items: <String>['Pants', 'Shirts', 'Shoes', 'Accessories']
                   .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -50,9 +52,17 @@ class _MenuState extends State<Menu> {
                     fontWeight: FontWeight.w500),
               ),
               onChanged: (String value) {
-                setState(() {
-                  _chosenValue = value;
-                });
+                _chosenValue = value;
+                Filter newList = Filter(_chosenValue, this.products);
+                Navigator.pop(context);
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        ShoppingPage(ProductGridWidget(newList.sort())),
+                  ),
+                );
               },
             ),
           ),
@@ -63,10 +73,7 @@ class _MenuState extends State<Menu> {
               items: <String>[
                 'Price Low to High',
                 'Price High to Low',
-                'Free',
-                'Four',
-                'Five',
-                'Six',
+                'Most Popular',
               ].map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
