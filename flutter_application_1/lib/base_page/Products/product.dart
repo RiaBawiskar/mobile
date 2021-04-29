@@ -5,8 +5,9 @@ class Product {
   String style;
   String title;
   String description;
+  String size;
   int price;
   int measurements;
   String type;
-  Product(this.img, this.description, this.price, this.title, this.measurements,this.type,[this.style]);
+  Product(this.img, this.description, this.price, this.title, this.measurements,this.type,this.size,[this.style]);
 }
