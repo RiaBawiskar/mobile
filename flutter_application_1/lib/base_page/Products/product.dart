@@ -7,5 +7,6 @@ class Product {
   String description;
   int price;
   int measurements;
-  Product(this.img, this.description, this.price, this.title, this.measurements,[this.style]);
+  String type;
+  Product(this.img, this.description, this.price, this.title, this.measurements,this.type,[this.style]);
 }
