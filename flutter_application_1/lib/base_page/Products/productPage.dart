@@ -23,7 +23,8 @@ class ProductPage extends StatelessWidget {
               height: 300,
               alignment: Alignment.center,
               decoration: new BoxDecoration(
-                image: DecorationImage(image: this.product.img, fit: BoxFit.fill),
+                image:
+                    DecorationImage(image: this.product.img, fit: BoxFit.fill),
               ),
             ),
           ),
@@ -31,32 +32,48 @@ class ProductPage extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(2.0),
-                  child: Text(this.product.type,style: TextStyle(fontSize: 15)),
+                  padding: const EdgeInsets.only(top: 2.0),
+                  child:
+                      Text(this.product.type, style: TextStyle(fontSize: 15)),
+                ),
+                Text(this.product.title,
+                    style:
+                        TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                Padding(
+                  padding: const EdgeInsets.only(bottom:10),
+                  child: Text("\$${this.product.price}",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(this.product.title, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                  child: Text(this.product.description,
+                      style: TextStyle(fontSize: 15)),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text("\$${this.product.price}", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                  padding: const EdgeInsets.only(top:8.0),
+                  child: Text("Size " + this.product.size,
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(this.product.description, style: TextStyle(fontSize: 15)),
+                  padding: const EdgeInsets.only(bottom:15),
+                  child: Text("Measurements: " + "${this.product.measurements}",
+                      style: TextStyle(fontSize: 15)),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text("Size " + this.product.size, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text("Measurements: " + "${this.product.measurements}", style: TextStyle(fontSize: 15)),
-                ),
+                RaisedButton(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.green[200],
+                  onPressed: () => print("Button Pressed"),
+                  child: Text("Add to Cart"),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                )
               ],
             ),
-          )
+          ),
         ],
       ),
       bottomNavigationBar: MainBottomBar(),
