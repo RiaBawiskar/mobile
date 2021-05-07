@@ -34,6 +34,13 @@ class _ShoppingPageState extends State<ShoppingPage> {
       title: Text("Shop"),
       actions: [
         searchBar.getSearchAction(context),
+        IconButton(
+          icon: Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+          ),
+          onPressed: null,
+        )
       ],
     );
   }
