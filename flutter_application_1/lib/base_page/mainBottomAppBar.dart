@@ -11,15 +11,15 @@ class MainBottomBar extends StatelessWidget {
     Product(AssetImage('assets/images/b.jpeg'), "Product B description", 23,
         "Product B", 5,"Pants","M"),
     Product(AssetImage('assets/images/c.jpeg'), "Product C description", 15,
-        "Product C", 12,"Shoes","7"),
+        "Product C", 12,"Shirts","7"),
     Product(AssetImage('assets/images/d.jpeg'), "Product D description", 20,
-        "Product D", 11,"Shirts","M"),
+        "Product D", 11,"Shoes","M"),
     Product(AssetImage('assets/images/e.jpeg'), "Product E description", 10,
         "Product E", 14,"Accessories","L"),
     Product(AssetImage('assets/images/f.jpeg'), "Product F description", 8,
-        "Product F", 7,"Pants"),
+        "Product F", 7,"Pants","L"),
     Product(AssetImage('assets/images/g.jpeg'), "Product G description", 13,
-        "Product G", 9,"Accessories"),
+        "Product G", 9,"Accessories","6"),
 
   ];
   @override
