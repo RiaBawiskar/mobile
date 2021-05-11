@@ -16,6 +16,11 @@ class MainBottomBar extends StatelessWidget {
         "Product D", 11,"Shoes"),
     Product(AssetImage('assets/images/e.jpeg'), "Product E description", 10,
         "Product E", 14,"Accessories"),
+    Product(AssetImage('assets/images/f.jpeg'), "Product F description", 8,
+        "Product F", 7,"Pants"),
+    Product(AssetImage('assets/images/g.jpeg'), "Product G description", 13,
+        "Product G", 9,"Accessories"),
+    
   ];
   @override
   Widget build(BuildContext context) {
