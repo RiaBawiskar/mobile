@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/Products/product.dart';
+import 'package:flutter_application_1/base_page/Products/productPage.dart';
 
 class CardProduct extends StatelessWidget {
   final Product item;
@@ -14,7 +15,8 @@ class CardProduct extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
           onTap: () {
-            null;
+            Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ProductPage(this.item)));
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
