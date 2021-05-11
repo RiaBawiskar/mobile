@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/base_page/Products/product.dart';
 import 'package:flutter_application_1/base_page/aesthetics/grid_card_product.dart';
 import 'package:flutter_application_1/base_page/mainBottomAppBar.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
@@ -17,6 +16,7 @@ class ShoppingPage extends StatefulWidget {
 class _ShoppingPageState extends State<ShoppingPage> {
   Menu menu;
   SearchBar searchBar;
+
   final ProductGridWidget a;
 
   _ShoppingPageState(this.a) {
@@ -50,7 +50,7 @@ class _ShoppingPageState extends State<ShoppingPage> {
     return Scaffold(
       backgroundColor: Colors.lightGreen[200],
       appBar: searchBar.build(context),
-      drawer: Menu(this.a.itemList),
+      drawer: Menu(this.a.itemList,),
       body: this.a,
       bottomNavigationBar: MainBottomBar(),
     );
