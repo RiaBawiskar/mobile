@@ -14,6 +14,10 @@ class _SellingPageState extends State<SellingPage> {
   final _emailController = TextEditingController();
 
   final _titleController = TextEditingController();
+
+  final _descriptionController = TextEditingController();
+
+  final _measurementController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,6 +73,76 @@ class _SellingPageState extends State<SellingPage> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder()),
             ),
+            SizedBox(height: 8.0),
+            TextFormField(
+              controller: _descriptionController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "Description of Product",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            SizedBox(height: 8.0),
+            TextFormField(
+              controller: _measurementController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "Measurements",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            Row(children:[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: RaisedButton(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.green[200],
+                    onPressed: () => print("Hello"),
+                    child: Text(
+                      "Upload a Picture",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                      side: BorderSide(color: Colors.black),
+                    ),
+                  ),
+              ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.green[200],
+                    onPressed: () => print("Hello"),
+                    child: Text(
+                      "Take a Picture",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                      side: BorderSide(color: Colors.black),
+                    ),
+                  ),
+                )
+            ]),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RaisedButton(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.green[200],
+                    onPressed: () => print("Hello"),
+                    child: Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    shape: Border.all(),
+                  ),
+            )
           ],
         ),
       ),
