@@ -26,20 +26,20 @@ class _MenuState extends State<Menu> {
         padding: EdgeInsets.zero,
         children: [
           Container(
-            height: 110,
+            height: 88,
             child: DrawerHeader(
               decoration: BoxDecoration(color: Colors.green[900]),
               child: null,
             ),
           ),
           Container(
-            height: 350,
+            height: 330,
             child: ListView(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.only(top:10.0,right: 10,left:10),
             children: [
               Text(
                 "Filters",
-                style: TextStyle(fontSize: 65)
+                style: TextStyle(fontSize: 40)
                 ),
               /* Ink(
                 color: Colors.red,
@@ -53,7 +53,7 @@ class _MenuState extends State<Menu> {
                 title: Text(
                   "Shirts",
                   style: TextStyle(
-                    fontSize: 23, 
+                    fontSize: 16, 
                     color: Colors.black,
                   )),
                 onTap: (){
@@ -73,7 +73,7 @@ class _MenuState extends State<Menu> {
               ListTile(
                 contentPadding: EdgeInsets.all(5.0),
                 leading: Icon(Icons.horizontal_rule),
-                title: Text("Pants",style: TextStyle(fontSize: 23)),
+                title: Text("Pants",style: TextStyle(fontSize: 16)),
                 onTap: (){
                 _chosenValue = "Pants";
                 Filter newList = Filter(_chosenValue, this.products);
@@ -91,7 +91,7 @@ class _MenuState extends State<Menu> {
               ListTile(
                 contentPadding: EdgeInsets.all(5.0),
                 leading: Icon(Icons.horizontal_rule),
-                title: Text("Shoes",style: TextStyle(fontSize: 23)),
+                title: Text("Shoes",style: TextStyle(fontSize: 16)),
                 onTap: (){
                 _chosenValue = "Shoes";
                 Filter newList = Filter(_chosenValue, this.products);
@@ -109,7 +109,7 @@ class _MenuState extends State<Menu> {
               ListTile(
                 contentPadding: EdgeInsets.all(5.0),
                 leading: Icon(Icons.horizontal_rule),
-                title: Text("Accessories",style: TextStyle(fontSize: 23)),
+                title: Text("Accessories",style: TextStyle(fontSize: 16)),
                 onTap: (){
                 _chosenValue = "Accessories";
 
@@ -131,18 +131,18 @@ class _MenuState extends State<Menu> {
 
           ),
           Container(
-            height:330,
+            height:260,
             child: ListView(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
             children: [
               Text(
                 "Sort By",
-                style: TextStyle(fontSize: 65)
+                style: TextStyle(fontSize: 40)
                 ),
               ListTile(
                 contentPadding: EdgeInsets.all(5.0),
                 leading: Icon(Icons.horizontal_rule),
-                title: Text("Price Low to High",style: TextStyle(fontSize: 23)),
+                title: Text("Price Low to High",style: TextStyle(fontSize: 16)),
                 onTap: (){
                 _chosenValue = "Price Low to High";
                 SortBy newList = SortBy(_chosenValue, this.products);
@@ -160,7 +160,7 @@ class _MenuState extends State<Menu> {
               ListTile(
                 contentPadding: EdgeInsets.all(5.0),
                 leading: Icon(Icons.horizontal_rule),
-                title: Text("Price High to Low",style: TextStyle(fontSize: 23)),
+                title: Text("Price High to Low",style: TextStyle(fontSize: 16)),
                 onTap: (){
                 _chosenValue = "Price High to Low";
                 SortBy newList = SortBy(_chosenValue, this.products);
@@ -178,7 +178,7 @@ class _MenuState extends State<Menu> {
               ListTile(
                 contentPadding: EdgeInsets.all(5.0),
                 leading: Icon(Icons.horizontal_rule),
-                title: Text("Most Popular",style: TextStyle(fontSize: 23)),
+                title: Text("Most Popular",style: TextStyle(fontSize: 16)),
                 onTap: (){print("this should word");}
               ),
             ]
@@ -188,7 +188,7 @@ class _MenuState extends State<Menu> {
             height:50,
             padding: EdgeInsets.all(5.0),
             child: ElevatedButton(
-              child: Text('refresh'),
+              child: Text('Clear Filters/Sort'),
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.green[900])),
               onPressed: () {
                 SortBy newList = SortBy("refresh", this.products);
