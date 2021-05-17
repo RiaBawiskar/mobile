@@ -6,6 +6,7 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightGreen[200],
       appBar: AppBar(
         title: Text("About Us"),
         backgroundColor: Colors.green[900],
@@ -31,7 +32,7 @@ class AboutUs extends StatelessWidget {
                     padding: const EdgeInsets.all(15),
                     child: Text(
                       "GreenThreads",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                     ),
                   ),
                   Image.asset('assets/images/anika.jpg'),
@@ -65,7 +66,7 @@ class AboutUs extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Text("@greenthreads.co",
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center),
                   ),
                 ],
