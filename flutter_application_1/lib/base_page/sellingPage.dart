@@ -1,55 +1,149 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/base_page/mainBottomAppBar.dart';
 
-class SellingPage extends StatelessWidget {
-  final TextStyle steps = TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
+class SellingPage extends StatefulWidget {
+  @override
+  _SellingPageState createState() => _SellingPageState();
+}
+
+class _SellingPageState extends State<SellingPage> {
+  final _firstNameController = TextEditingController();
+
+  final _lastNameController = TextEditingController();
+
+  final _emailController = TextEditingController();
+
+  final _titleController = TextEditingController();
+
+  final _descriptionController = TextEditingController();
+
+  final _measurementController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightGreen[200],
       appBar: AppBar(
         title: Text("Sell"),
+        centerTitle: true,
         backgroundColor: Colors.green[800],
+        leading: Text(""),
       ),
       bottomNavigationBar: MainBottomBar(),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Are you interested in selling clothes on GreenThreads? Follow the steps below in order to become a seller.",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: <Widget>[
+            TextFormField(
+              autofocus: true,
+              controller: _firstNameController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "First Name",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            SizedBox(height: 8.0),
+            TextFormField(
+              controller: _lastNameController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "Last Name",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            SizedBox(height: 8.0),
+            TextFormField(
+              controller: _emailController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "Email",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            SizedBox(height: 8.0),
+            TextFormField(
+              controller: _titleController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "Title of Product",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            SizedBox(height: 8.0),
+            TextFormField(
+              controller: _descriptionController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "Description of Product",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            SizedBox(height: 8.0),
+            TextFormField(
+              controller: _measurementController,
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  hintText: "Measurements",
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder()),
+            ),
+            Row(children:[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: RaisedButton(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.green[200],
+                    onPressed: () => print("Hello"),
+                    child: Text(
+                      "Upload a Picture",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                      side: BorderSide(color: Colors.black),
+                    ),
+                  ),
               ),
-              SizedBox(height: 60),
-              Text(
-                "1. Use contact information(text/email/DM) to send product pictures to team",
-                style: steps,
-              ),
-              Text(
-                "2. Team approves object for further review(possible categorize by aesthetic)",
-                style: steps,
-              ),
-              Text(
-                "3. Team buys from seller at negotiated price",
-                style: steps,
-              ),
-              Text(
-                "4. Seller sends over product to team(how tho)",
-                style: steps,
-              ),
-              Text(
-                "5. After approval, team uploads product pics to app, and price(they decide)",
-                style: steps,
-              ),
-              Text(
-                "6. Seller doesn't have to worry about getting object sold",
-                style: steps,
-              ),
-            ],
-          ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.green[200],
+                    onPressed: () => print("Hello"),
+                    child: Text(
+                      "Take a Picture",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                      side: BorderSide(color: Colors.black),
+                    ),
+                  ),
+                )
+            ]),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RaisedButton(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.green[200],
+                    onPressed: () => print("Hello"),
+                    child: Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    shape: Border.all(),
+                  ),
+            )
+          ],
         ),
       ),
     );
