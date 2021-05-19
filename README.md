@@ -12,14 +12,14 @@ Once the user opens up the app they are welcomed with a login page featuring an 
 
 ## Requirements
 
-Operating Systems: Windows 7 SP1 or later (64-bit), x86-64 based. macOS (64-bit). Linux (64-bit). Chrome OS (64-bit) with Linux (Beta) turned on.
+Operating Systems: Windows 7 SP1 or later (64-bit), x86-64 based. macOS (64-bit). Linux (64-bit). Chrome OS (64-bit) with Linux (Beta) turned on. <br />
 External Services: VS-code, Android Studio, Xcode(MacOS only)
 
 ### Installation Instructions
 
-Installing Flutter - https://flutter.dev/desktop
-Installing VS-code - https://code.visualstudio.com/docs/setup/setup-overview
-Installing Android Studio - https://developer.android.com/studio/install
+Installing Flutter - https://flutter.dev/desktop <br />
+Installing VS-code - https://code.visualstudio.com/docs/setup/setup-overview <br />
+Installing Android Studio - https://developer.android.com/studio/install <br />
 Installing Xcode(MacOS only) - https://www.freecodecamp.org/news/how-to-download-and-install-xcode/
 
 ## Configure
